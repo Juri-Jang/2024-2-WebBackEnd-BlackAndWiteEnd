@@ -13,6 +13,7 @@ exports.renderProfile = async (req, res) => {
                     as: 'restaurant',
                 }
             ],
+            order: [['createdAt', 'DESC']], // 'createdAt'을 기준으로 내림차순
         });
         console.log(reviews);
         res.render('profile', {
